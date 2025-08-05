@@ -84,18 +84,19 @@ color:cornsilk
     text-align: center;
     top:45px;
     transition: opacity 0.3s ease, visibility 0.3s ease;
- 
+ padding: 0px 30px;
     left:10px;
     border-radius: 0px 0px 5px 5px;
     line-height: 20px;
     background-color: #2C3E50 ;
-            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+     background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
     z-index: 2;
 
   }
   .htmlmenu li a{
     display:block;
-    border-bottom: 1px solid cornsilk;
+    
+    border-bottom: 1px solid rgb(19, 16, 6);
   }
  .navlinks .links li:hover .htmlmenu {
 display:block;
@@ -121,7 +122,7 @@ display:block;
     background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
      left:60px;
      transition: opacity 0.3s ease, visibility 0.3s ease;
-     bottom: 1px solid cornsilk;
+     bottom: 1px solid rgb(10, 8, 3);
      border-radius: 0px 0px 5px 5px;
    }
     
@@ -150,7 +151,7 @@ display:block;
    }
    .jssubmenu a{
     display: block;
-        border-bottom: 1px solid cornsilk;
+        border-bottom: 1px solid rgb(14, 11, 2);
         white-space: nowrap;
    }
    .navlinks .links li:hover .jssubmenu{
@@ -159,13 +160,16 @@ display:block;
     transition-delay: 0.2s;
    }
    .footer{
+    flex-wrap: nowrap;
     position:fixed;
     bottom:0%;
+    padding:10px;
     left:0%;
     background-color:#0F2C59;
     border: 2px solid black;
     width: 100%;
-    border-radius: 0px 20px 5px 5px;
+    height: 200px;
+    /* border-radius: 0px 20px 5px 5px; */
    }
 
   
@@ -177,8 +181,11 @@ list-style: none;
    }
    h2
    {
+    margin-bottom:0px;
+ line-height: 01px;
     color:#FFD700;
-    margin-bottom:-5px;
+    
+    
    }
    .container{
     position: relative;
@@ -194,16 +201,21 @@ padding: 10px 20px;
 
    }
    .social-links li {
-    display: inline-flex;
-    padding: 0px 20px;
-  position: relative;
+     
+    padding: 0px 15px;
+line-height: 6px;
+ 
    
    }
    .social .social-links i{
     color: black;
-    position: absolute;
-     right:300px;
-     top:70px;
+     flex-wrap:wrap;
+     top:30px;
+     line-height: 26px;
+     display: flex;
+         flex-direction: column;
+     right:220px;
+      position: relative ;
     font-size: larger;
     font-weight:500;
       color:darkorange;
@@ -216,12 +228,14 @@ padding: 10px 20px;
    }
    
      h4{
+      margin-top: 5px;
       color:#FFD700;
       font-size: larger;
  
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
      }
      address .add{
+      line-height: 1;
       color: #E0E0E0;
       font-size: larger;
       font-weight:500;
@@ -265,14 +279,18 @@ display: block;
    }
       */
  
- 
-/* section .hero img{
+   
+section{
 height: 100vh;
 width: 100%;
-object-fit: cover;
+ 
+ background-image:url(solarpanel.jpg); 
+background-repeat: no-repeat;
+background-size:cover;
+ 
  
  }
-         */ 
+         
     </style>
 </head>
 <body>
@@ -335,9 +353,9 @@ object-fit: cover;
 
     </nav>
 
-  <!--   <section class="hero">
-      <img src="solarpanel.jpg" alt="">
-    </section> -->
+    <section class="hero">
+ 
+    </section>
 
     <footer class="footer">
         <div class="container">
