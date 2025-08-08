@@ -273,15 +273,42 @@ display:block;
     
    
 section{
-height:700px;
+height:100vh;
 width: 100%;
 background-position: center;
- background-image:url(garrett-parker-DlkF4-dbCOU-unsplash.jpg); 
+ background-image:  linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%),
+        url(garrett-parker-DlkF4-dbCOU-unsplash.jpg);
+    background-position: center;;
 background-repeat: no-repeat;
- 
-
- 
+  display: flex;
+    align-items: center;
+    padding: 0 50px;
+    position: relative;
  }
+ .hello{
+  max-width:800px;
+  color: rgb(255, 255, 255);
+  z-index: 1;
+ }
+ .hello h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: #FFD700;
+ }
+ .hello p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hello-header {
+    color: #FFD700;
+    font-weight: bold;
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
  .service-title{
   width:80;
   margin-bottom: 60px;
@@ -298,6 +325,16 @@ background-repeat: no-repeat;
   color:#1A4B8C;
   margin-top: 30px;
   
+ }
+  .service-list{
+  text-align: center;
+   margin:  0  auto;
+
+ }
+ .service-list li{
+  color:#1A4B8C;
+ padding:10px 20px;
+  list-style:none ;
  }
  .service-title h5{
   align-items: center;
@@ -334,7 +371,7 @@ background-repeat: no-repeat;
   .service-card {
 flex-basis:30%;
 line-height: 30px;
-background-color: #2C3E50;
+background-color: whitesmoke;
  color:white;
 box-sizing: border-box;
 padding: 20px 10px;
@@ -343,6 +380,10 @@ margin-bottom: 5%;
  }
  .service-card h3{
   font-size: 20px;
+  padding: 0px  auto;
+  
+   flex-wrap: wrap;
+ 
  }
    .title-container {
             text-align: center;
@@ -382,7 +423,7 @@ margin-bottom: 5%;
  
  h3{
   margin-top: 10px;
-  color:whitesmoke;
+  color:black;
   margin-bottom: 20px;
   
  }
@@ -499,14 +540,14 @@ transform: translatex(-100%);
  .best{
   
    position: relative;
-  max-width: 800px;
+  max-width: 1000px;
 width: 100%;
   text-align: center;
   font-size:  20px;
   font-weight: 600;
   margin: 0px auto ;
   margin-bottom: 200px;
- 
+ line-height: 2;
   
   
  }
@@ -535,8 +576,8 @@ width: 100%;
     margin-top: 50px;
  }
     .best p {
-            font-size: 1.1rem;
-            line-height: 1.8;
+            font-size: 1.3rem;
+            line-height: 1.9;
             color:rgb(112, 43, 31);
             
             margin-top: 20px;
@@ -544,14 +585,10 @@ width: 100%;
  .power{
   display:inline;
  }
- .service-list{
-  text-align: center;
-   margin:  0  auto;
- }
- .service-list li{
-  color:#FFD700;
-  list-style: none;
- }
+.hello{
+ 
+}
+    
 
 
     </style>
@@ -598,7 +635,18 @@ width: 100%;
      </div>
 
  </nav>
- <section class="hero"> </section>
+
+ <section class="hero"> 
+  <div class="hello">
+    <h2> <p class="hello-header">Best Power</p>  YOUR SOURCE FOR POWER EXCELLENCE</h2>
+    <p> At Best Power, we'rededicated to lighting up lives
+and industries. With a legacy of 5 years, we're your
+go-to experts in power equipment, ICT solutions,
+manufacturing, and cutting-edge technology.
+Join us in shaping a brighter, more connected
+future.</p>
+  </div>
+ </section>
 <div class="service-title">
   <div class="title-container">
   <h1>Services and products</h1>
@@ -612,44 +660,56 @@ width: 100%;
       <img class="trans" src="transformer.jpg" alt="">
       <h3>1. Import and Distribution of Power Equipment:</h3>
       <ul class="service-list">
-      <li>A. Transformers</li>
-      <li>B. Generators</li>
-      <li>C. Powerbacks (UPS)</li>
-      <li>D. Inverters</li>
-      <li>E .Batteries</li>
-      <li>F. Rectifiers</li>
-      <li>G. Car Chargers (EV Chargers)</li>
-      <li>H. Automatic Voltage Regulators (AVRs)</li>
+      <li>Transformers</li>
+      <li>Generators</li>
+      <li>Powerbacks (UPS)</li>
+      <li>Inverters</li>
+      <li>Batteries</li>
+      <li>Rectifiers</li>
+      <li>Car Chargers (EV Chargers)</li>
+      <li>Automatic Voltage Regulators (AVRs)</li>
 </ul>
        
     </div>
     <div class="service-card">
       <img class="trans" src="switch.jpg" alt="">
       <h3>2. Import and Distribution of ICT Equipment:</h3>
-     
-       In an increasingly digital world, our Import and Distribution of ICT Equipment services play a pivotal
-role. We provide essential components such as switches, fiber cables, Cat 6 copper cables, servers,
-racks, and comprehensive data center solutions. These offerings keep you connected, efficient, and
-ready for the challenges of the digital age
+     <ul class="service-list">
+      <li>Switches</li>
+      <li>Fiber Cables</li>
+      <li>Cat 6 Copper Cables</li>
+      <li>Servers</li>
+      <li>Racks</li>
+      <li> Data Center Solutions</li>
+     </ul>
+      
     </div>
     <div class="service-card">
       <img class="trans" src="ats.jpg" alt="">
       <h3>3.Manufacturing, Assembly,and Testing:</h3>
- 
-      Best Power doesn't just distribute; we manufacture, assemble, and rigorously test critical systems.
-Our expertise extends to Automatic Transfer Switch (ATS) panels, Uninterruptible Power Supply
-(UPS) units, inverters, Automatic Voltage Regulators (AVRs), DC controllers, and Human-Machine
-Interface (HMI) units. Our commitment to quality control ensures that every product meets the
-highest standards of reliability and performance.
+    <ul class="service-list">
+      <li>Automatic Transfer Switch (ATS) Panels</li>
+      <li>Uninterruptible Power Supply (UPS) Units</li>
+      <li>Inverters</li>
+      <li>Automatic Voltage Regulators (AVRs)</li>
+      <li>DC Controllers</li>
+      <li>Human-Machine Interface (HMI) Units</li>
+     </ul>
     </div>
     <div class="service-card">
       <img class="trans" src="embedded.jpg" alt="">
       <h3>4.Embedded Solutions and Software Integration:</h3>
     
-  Innovation is at the heart of our services. Best Power leads the way in developing and designing
-embedded solutions, offering software integration, and conducting comprehensive testing. Our
-innovative technologies optimize operations and elevate capabilities, providing seamless solutions
-that redefine what's possible.
+     <ul class="service-list">
+      <li>Embedded System Design</li>
+      <li>Firmware Development</li>
+      <li>IoT Integration</li>
+      <li>Real-time Systems</li>
+      <li>Systems Integration</li>
+      <li>API Integration</li>
+      <li>Custom Software Development</li>
+      <li>Testing and Quality Assurance</li>
+     </ul>
    
     </div>
   
@@ -686,15 +746,19 @@ that redefine what's possible.
     </div>
 <div class="best-wrapper">
 <div class="best">
-  <h2 class="best-header">BEST POWER <span class="best-sec">YOUR SOURCE FOR
-POWER EXCELLENCE</span> </h2>
+  <h2 class="best-header">BEST POWER <span class="best-sec">HI THERE!
+ </span> </h2>
 <p>
-   <p class="power"> At Best Power</p>, we're dedicated to lightingup lives
-and industries. With a legacy of 5 years, we're your
-go-to experts in power equipment, ICT solutions,
-manufacturing, and cutting-edge technology.
-Join us in shaping a brighter, more connected
-future.
+   <p class="power"> At Best Power</p> ,  we believe in the transformative power of energy and technology.
+We're not just a company; we're a dynamic force that powers dreams, connects
+communities, and drives innovation. With our robust lineup of services
+encompassing power equipment, ICT solutions, manufacturing expertise, and
+software integration, we're your one-stop solution provider. We take pride in our
+team of dedicated professionals who bring expertise and passion to every project.
+Whether you're a business seeking reliable power solutions, an organization in
+need of advanced ICT infrastructure, or an innovator looking for embedded
+solutions, Best Power is here to meet your needs. Join us, and together, we'll spark
+possibilities and light up a world of opportunities.
 </p>
 </div>
 </div>
