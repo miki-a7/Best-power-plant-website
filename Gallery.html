@@ -1,0 +1,182 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Power - Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+             background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+            color: #fff;
+             
+        }
+        
+        .gallery-wrapper {
+           
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .gallery-header {
+            text-align: center;
+            margin-top: 120px;
+            margin-bottom: 70px;
+        }
+        
+        .gallery-header h1 {
+            font-size: 2.5rem;
+            color:whitesmoke;
+            margin-bottom: 15px;
+        }
+         .gallery-wrapper h1{
+            position: relative;
+        }
+        .gallery-wrapper h1:after{
+            position: absolute;
+            content: "";
+            left: 50%;
+            transform: translateX(-50%);
+            bottom:-05px;
+            background-color: goldenrod;
+            width: 5%;
+            height: 3px;
+        }
+        .gallery-header p {
+            font-size: 1.1rem;
+            color:white;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .gallery-item {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .item-info {
+            padding: 15px;
+        }
+        
+        .item-info h3 {
+            color: #0F2C59;
+            margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .item-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .gallery-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-wrapper">
+        <div class="gallery-header">
+            <h1>Our Project Gallery</h1>
+            <p>Explore our successful power solutions implementations and manufacturing excellence</p>
+        </div>
+        
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="images/Breaker.jpg" alt="Transformer Installation">
+                <div class="item-info">
+                    <h3>Transformer Installation</h3>
+                    <p>500KVA transformer setup for industrial client</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/lamp 2.jpg" alt="Generator Installation">
+                <div class="item-info">
+                    <h3>Generator Setup</h3>
+                    <p>750KVA standby power solution</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/Lamp.jpg" alt="Solar Installation">
+                <div class="item-info">
+                    <h3>Solar Power System</h3>
+                    <p>50KW commercial solar installation</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/energy1.jpg" alt="ATS Production">
+                <div class="item-info">
+                    <h3>ATS Manufacturing</h3>
+                    <p>Automatic Transfer Switch production</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/solarpanel.jpg" alt="UPS Testing">
+                <div class="item-info">
+                    <h3>Quality Testing</h3>
+                    <p>Rigorous UPS system testing</p>
+                </div>
+            </div>
+            
+            <div class="gallery-item">
+                <img src="images/switch.jpg" alt="AVR Production">
+                <div class="item-info">
+                    <h3>AVR Assembly</h3>
+                    <p>Automatic Voltage Regulator production</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Power line.jpg" alt="AVR Production">
+                <div class="item-info">
+                    <h3>AVR Assembly</h3>
+                    <p>Automatic Voltage Regulator production</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/Power line 2.jpg" alt="AVR Production">
+                <div class="item-info">
+                    <h3>AVR Assembly</h3>
+                    <p>Automatic Voltage Regulator production</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
