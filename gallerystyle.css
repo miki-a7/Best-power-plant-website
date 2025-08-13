@@ -1,14 +1,114 @@
- * {
+
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
-
 body {
-    background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #9ec7f0 0%, #606161 100%);
 }
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    z-index: 1000;
+    background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-wrap:nowrap;
+    padding: 0 20px;
+   
+    margin: 0 auto;
+}
+
+.logo h2 {
+    color: cornsilk;
+    cursor: pointer;
+    margin-right: 110px;
+    white-space: nowrap;
+}
+
+.navlinks .links {
+    list-style: none;
+    white-space: nowrap;
+    
+}
+
+.navlinks .links > li {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    padding: 20px 5px;
+   /*  overflow: hidden; */
+}
+
+.navlinks .links li a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: 600;
+    margin-left: auto;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navlinks .links > li > a:hover {
+    color: #FFD700;
+}
+
+/* Dropdown Menus */
+.htmlmenu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    padding: 10px 10px;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+.jssubmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+    border-radius: 0 0 5px 5px;
+    list-style: none;
+    padding: 0 10px ;
+    display: none; /* Hidden by default */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+
+.navlinks .links > li:hover .htmlmenu,
+.navlinks .links > li:hover .jssubmenu {
+    display: block; /* Show on hover */
+}
+
+.htmlmenu li, .jssubmenu li {
+    text-align: left;
+}
+
+.htmlmenu li a, .jssubmenu li a {
+    display: block;
+    padding: 12px 20px;
+    white-space: nowrap;
+}
+
+.htmlmenu li a:hover, .jssubmenu li a:hover {
+    background-color: #1A4B8C;
+}
+
 
 .gallery-wrapper {
     max-width: 1200px;
@@ -99,3 +199,108 @@ body {
         font-size: 2rem;
     }
 }
+.footer {
+            width: 100%;
+            background-color: #0F2C59;
+            border-top: 2px solid black;
+            padding: 15px 20px;
+            height: auto;
+            z-index:8;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footleft {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .social {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        address .add {
+            color: #E0E0E0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-top: 5px;
+            white-space: normal;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        .social-links li {
+            list-style: none;
+        }
+
+        .social-links a i {
+            color: darkorange;
+            font-size: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a i:hover {
+            color: white;
+            transform: scale(1.1);
+        }
+
+        h2, h4 {
+            color: #FFD700;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        h4 {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .social{
+          position: relative;
+        }
+          .follow{
+            position: absolute;
+          color: #afd8f4;
+          right:20px;
+           bottom:30px;
+        }
+
+        @media (max-width: 600px) {
+            .footer {
+                padding: 10px 15px;
+            }
+            
+            .container {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+            
+            .social-links {
+                justify-content: center;
+                margin-top: 5px;
+            }
+            
+            address .add {
+                font-size: 13px;
+                line-height: 1.3;
+            }
+            
+            h2, h4 {
+                font-size: 15px;
+            }
+        } 
