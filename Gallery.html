@@ -13,17 +13,19 @@
             <div class="logo">
                 <h2>Best Power</h2>
             </div>
-            <div class="navlinks">
+               <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+            <div class="navlinks" id="navlinks">
                 <ul class="links">
                     <li><a href="index.html">Home</a></li>
                     <li>
                         <a href="#">Service and product</a>
                         <ul class="htmlmenu">
-                            <li><a href="#">Import and Distribution of Power Equipment</a></li>
-                            <li><a href="#">Manufacturing, Assembly, and Testing</a></li>
-                            <li><a href="#">Import and Distribution of ICT Equipment</a></li>
-                            <li><a href="#">Automatic Voltage Regulators (AVRs)</a></li>
-                            <li><a href="#">Embedded Solutions and Software Integration</a></li>
+                            <li><a href="import.html">Import and Distribution of Power Equipment</a></li>
+                            <li><a href="manu.html">Manufacturing, Assembly, and Testing</a></li>
+                            <li><a href="ict.html">Import and Distribution of ICT Equipment</a></li>
+                            <li><a href="soft.html">Embedded Solutions and Software Integration</a></li>
                         </ul>
                     </li>
                     <li>
@@ -136,6 +138,18 @@
             </div>
         </div>
     </footer>
+    <!-- SIMPLE JS TOGGLE -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navlinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+      hamburger.innerHTML = navlinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
 
 </body>
 </html>

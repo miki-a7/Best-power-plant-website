@@ -19,17 +19,20 @@
             <div class="logo">
                 <h2>Best Power</h2>
             </div>
-            <div class="navlinks">
+                     <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+            <div class="navlinks" id="navlinks">
                 <ul class="links">
                     <li><a href="#">Home</a></li>
+
                     <li>
                         <a href="#">Service and product</a>
                         <ul class="htmlmenu">
-                            <li><a href="#">Import and Distribution of Power Equipment</a></li>
-                            <li><a href="#">Manufacturing, Assembly, and Testing</a></li>
-                            <li><a href="#">Import and Distribution of ICT Equipment</a></li>
-                            <li><a href="#">Automatic Voltage Regulators (AVRs)</a></li>
-                            <li><a href="#">Embedded Solutions and Software Integration</a></li>
+                            <li><a href="import.html#import">Import and Distribution of Power Equipment</a></li>
+                            <li><a href="manu.html#manu">Manufacturing, Assembly, and Testing</a></li>
+                            <li><a href="ict.html#ict">Import and Distribution of ICT Equipment</a></li>
+                            <li><a href="soft.html#soft">Embedded Solutions and Software Integration</a></li>
                         </ul>
                     </li>
                     <li>
@@ -50,6 +53,7 @@
 
     <!-- Hero Section -->
     <section class="hero">
+         
         <div class="hello">
             <h2><span class="hello-header">Best Power</span> YOUR SOURCE FOR POWER EXCELLENCE</h2>
             <p>At Best Power, we're dedicated to lighting up lives and industries. With a legacy of 5 years, we're your go-to experts in power equipment, ICT solutions, manufacturing, and cutting-edge technology. Join us in shaping a brighter, more connected future.</p>
@@ -106,7 +110,7 @@
             </div>
         </div>
         <div class="button-wrapper">
-            <button class="btn">Learn More</button>
+           <a href="import.html"><button class="btn">Learn More</button></a> 
         </div>
     </div>
 
@@ -173,6 +177,18 @@
             </div>
         </div>
     </footer>
+   
+     <script>
+    const hamburger = document.getElementById('hamburger');
+    const navlinks = document.getElementById('navlinks');
 
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+      hamburger.innerHTML = navlinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+     
 </body>
 </html>

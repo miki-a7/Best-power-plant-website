@@ -1,0 +1,170 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="import.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+      <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h2>Best Power</h2>
+            </div>
+                  <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+            <div class="navlinks" id="navlinks">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Service and product</a>
+                        <ul class="htmlmenu">
+                            <li><a href="import.html">Import and Distribution of Power Equipment</a></li>
+                            <li><a href="manu.html">Manufacturing, Assembly, and Testing</a></li>
+                            <li><a href="ict.html">Import and Distribution of ICT Equipment</a></li>
+                            <li><a href="soft.html">Embedded Solutions and Software Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="About Us.html">About us</a>
+                        <ul class="jssubmenu">
+                            <li><a href="About Us.html#about" >About company</a></li>
+                            <li><a href="about us.html#mission">Mission</a></li>
+                            <li><a href="about us.html#vision">Vision</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="service-wrapper">
+<div class="service-header">
+        <h2 class="serv">Our Service</h2>
+        <p>welcome to our products and services</p>
+</div>
+           <div class="service-content">
+    <div class="content-header">
+         <h3 id="import"> Import and Distribution of ICT Equipment:</h3>
+    </div>
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/sw.jpg" alt="">
+            </div>
+            <div class="service-about">
+         <h3 class="item">A. Switches</h3>
+         <p> We provide advanced switches for network
+connectivity, enabling efficient data flow and
+management 
+        
+        </p>
+        </div>
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/fire.jpg" alt="">
+            </div>
+                    <div class="service-about">
+         <h3 class="item">B. Fiber Cables</h3>
+         <p> Our fiber optic cables enable high-speed, longdistance data transmission with minimal signal loss.</p> 
+    </div>
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/copper.jpg" alt="">
+            </div>
+<div class="service-about">
+         <h3 class="item"> C. Cat 6 Copper Cables</h3>
+         <p> Best Power imports Cat 6 copper cables to support
+high-speed Ethernet connections in various business.</p> 
+
+</div>
+        
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/server.jpg" alt="">
+            </div>
+            <div class="service-about">
+         <h3 class="item"> D. Servers </h3>
+         <p> We offer powerful servers to businesses, data centers,
+and organizations, facilitating the hosting of websites.</p> 
+        </div>
+</div> 
+<div class="service-item">
+            <div class="image">
+                <img src="images/racks.jpg" alt="">
+            </div>
+              <div class="service-about">
+         <h3 class="item">E. Racks</h3>
+         <p>Our server racks provide secure and organized housing
+for servers and network equipment, optimizing space. </p>
+        
+        </div>
+</div> 
+<div class="service-item">
+            <div class="image">
+                <img src="images/data.jpg" alt="">
+            </div>
+              <div class="service-about">
+         <h3 class="item">F. Data Center Solutions</h3>
+         <p> Best Power supplies comprehensive data center
+solutions, including racks, cooling systems.</p>
+        
+     
+        </div>
+</div> 
+ 
+ 
+
+            </div> 
+</div> 
+<footer class="footer">
+        <div class="container">
+            <div class="footleft">
+                <h4>&copy; Best Power</h4>
+                <address>
+                    <h2>Address</h2>
+                    <div class="add">
+                        Yeka Subcity, Woreda 07, Near Signal Square,<br>
+                        Tsega Bldg, 7th Floor, Office No. 701<br>
+                        Addis Ababa, Ethiopia
+                    </div>
+                </address>
+            </div>
+            <div class="social">
+                <h2 class="follow">Follow Us</h2>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+ 
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navlinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+      hamburger.innerHTML = navlinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+ 
+</body>
+</html>

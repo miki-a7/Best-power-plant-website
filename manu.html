@@ -1,0 +1,177 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=" manu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+      <nav>
+        <div class="navbar">
+            <div class="logo">
+                <h2>Best Power</h2>
+            </div>
+                   <button class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </button>
+            <div class="navlinks" id="navlinks">
+                <ul class="links">
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="#">Service and product</a>
+                        <ul class="htmlmenu">
+                            <li><a href="import.html">Import and Distribution of Power Equipment</a></li>
+                            <li><a href="manu.html">Manufacturing, Assembly, and Testing</a></li>
+                            <li><a href="ict.html">Import and Distribution of ICT Equipment</a></li>
+                            <li><a href="soft.html">Embedded Solutions and Software Integration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="About Us.html">About us</a>
+                        <ul class="jssubmenu">
+                            <li><a href="About Us.html#about" >About company</a></li>
+                            <li><a href="about us.html#mission">Mission</a></li>
+                            <li><a href="about us.html#vision">Vision</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact us.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="service-wrapper">
+<div class="service-header">
+        <h2 class="serv">Our Service</h2>
+        <p>welcome to our products and services</p>
+
+  <div class="content-header">
+         <h3 id="import">Manufacturing, Assembly, and Testing</h3>
+    </div>
+    </div>
+           <div class="service-content">
+  
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/ATS.jpg" alt="">
+            </div>
+            <div class="service-about">
+         <h3 class="item"> Automatic Transfer Switch (ATS) Panels</h3>
+         <p> At Best Power, we are the architects of seamless
+power transitions. Our ATS panels are masterfully
+crafted. </p> 
+ 
+      
+        </div>
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/ups.jpg" alt="">
+            </div>
+                    <div class="service-about">
+         <h3 class="item">  Uninterruptible Power Supply (UPS) Units</h3>
+         <p> In the realm of power backup solutions, our UPS units
+shine as beacons of dependability</p> 
+ 
+    </div>
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/inverters.jpg" alt="">
+            </div>
+<div class="service-about">
+         <h3 class="item">  Inverters</h3>
+         <p>  At Best Power, we harness the power of precision in
+every inverter we manufacture and assemble.</p> 
+ 
+
+</div>
+        
+</div> 
+           
+<div class="service-item">
+            <div class="image">
+                <img src="images/AVR.jpg" alt="">
+            </div>
+            <div class="service-about">
+         <h3 class="item"> Automatic Voltage Regulators (AVRs)</h3>
+         <p> Voltage stability is our fort at Best Power. Our AVRs
+    are the result of years of skill honing.</p> 
+ 
+        </div>
+</div> 
+<div class="service-item">
+            <div class="image">
+                <img src="images/dc.jpg" alt="">
+            </div>
+              <div class="service-about">
+         <h3 class="item"> DC Controllers</h3>
+         <p> precision is at the heart of every DC controller we
+create. Best Power's brings you best services. </p>
+ 
+        
+        </div>
+</div> 
+<div class="service-item">
+            <div class="image">
+                <img src="images/hiu.webp" alt="">
+            </div>
+              <div class="service-about">
+         <h3 class="item"> Human-Machine Interface (HMI) Units</h3>
+         <p> Best Power supplies Our HMI units are the epitome of
+user-friendly design and technological mastery.</p>
+         
+        
+     
+        </div>
+</div> 
+ 
+
+            </div> 
+</div> 
+<footer class="footer">
+        <div class="container">
+            <div class="footleft">
+                <h4>&copy; Best Power</h4>
+                <address>
+                    <h2>Address</h2>
+                    <div class="add">
+                        Yeka Subcity, Woreda 07, Near Signal Square,<br>
+                        Tsega Bldg, 7th Floor, Office No. 701<br>
+                        Addis Ababa, Ethiopia
+                    </div>
+                </address>
+            </div>
+            <div class="social">
+                <h2 class="follow">Follow Us</h2>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navlinks = document.getElementById('navlinks');
+
+    hamburger.addEventListener('click', () => {
+      navlinks.classList.toggle('active');
+      hamburger.innerHTML = navlinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+  </script>
+ 
+
+ 
+</body>
+</html>
