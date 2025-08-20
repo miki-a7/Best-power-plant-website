@@ -2,6 +2,7 @@
     padding:0;
     margin: 0;
     box-sizing: border-box;
+     
 }
 body{ 
      background: linear-gradient(135deg, #6fb6fd 0%, #606161 100%);
@@ -129,7 +130,7 @@ padding: 0;
  
 padding: 40px;
 font-size: 50px;
-  color: rgb(216, 139, 139);
+  color: rgb(30, 4, 62);
 font-weight: bold;
  
 
@@ -156,7 +157,7 @@ font-weight: bold;
      
 }
 .content-header  h3{
-     color: rgb(227, 139, 139);
+     color: rgb(30, 40, 62);
       font-weight:bolder;
     
 
