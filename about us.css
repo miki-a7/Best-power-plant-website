@@ -60,6 +60,7 @@
 }
  .logo h2{
 cursor: pointer;
+font-size: 30px;
 white-space: nowrap;
 color:cornsilk
  }
@@ -196,7 +197,7 @@ display:block;
 
         .section-title h2 {
             font-size: 40px;
-            color:whitesmoke;
+           color: rgb(227, 156, 156); 
             margin-bottom: 15px;
             display: inline-block;
             margin-top: 20px;

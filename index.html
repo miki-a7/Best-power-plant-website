@@ -178,17 +178,78 @@
         </div>
     </footer>
    
-     <script>
-    const hamburger = document.getElementById('hamburger');
-    const navlinks = document.getElementById('navlinks');
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/251962696847" class="chat-button whatsapp-button" target="_blank" id="whatsappButton">
+            <i class="fab fa-whatsapp"></i>
+            <div class="notification-dot">1</div>
+            
+        </a>
+        
+        <!-- Telegram Button -->
+        <a href="https://t.me/miki_a7" class="chat-button telegram-button" target="_blank" id="telegramButton">
+            <i class="fab fa-telegram"></i>
+            <div class="notification-dot">1</div>
+        
+        </a>
+        
+        <!-- Hide Button -->
+        <div class="chat-button hide-button" id="hideButton">
+            <i class="fas fa-times"></i>
+ 
+        </div>
+    </div>
+   
+    <script>
+        // Navigation menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navlinks = document.getElementById('navlinks');
 
-    hamburger.addEventListener('click', () => {
-      navlinks.classList.toggle('active');
-      hamburger.innerHTML = navlinks.classList.contains('active') 
-        ? '<i class="fas fa-times"></i>' 
-        : '<i class="fas fa-bars"></i>';
-    });
-  </script>
-     
+        hamburger.addEventListener('click', () => {
+            navlinks.classList.toggle('active');
+            hamburger.innerHTML = navlinks.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Chat Widget functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hideButton = document.getElementById('hideButton');
+            const telegramButton = document.getElementById('telegramButton');
+            const whatsappButton = document.getElementById('whatsappButton');
+            
+            // Add popup-active class to trigger animation
+            telegramButton.classList.add('popup-active');
+            whatsappButton.classList.add('popup-active');
+            
+            // Remove notification dots after 8 seconds
+            setTimeout(() => {
+                const notificationDots = document.querySelectorAll('.notification-dot');
+                notificationDots.forEach(dot => {
+                    dot.style.display = 'none';
+                });
+            }, 8000);
+            
+            // Hide buttons functionality
+            hideButton.addEventListener('click', function() {
+                telegramButton.classList.toggle('hidden');
+                whatsappButton.classList.toggle('hidden');
+                
+                // Change icon based on state
+                if (telegramButton.classList.contains('hidden')) {
+                    hideButton.innerHTML = '<i class="fas fa-comments"></i>';
+                    hideButton.querySelector('.tooltip').textContent = 'Show chat buttons';
+                } else {
+                    hideButton.innerHTML = '<i class="fas fa-times"></i>';
+                    hideButton.querySelector('.tooltip').textContent = 'Hide chat buttons';
+                }
+            });
+        });
+    </script>
+       
+   
+    
+ 
 </body>
 </html>

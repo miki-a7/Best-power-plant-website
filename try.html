@@ -1,286 +1,374 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Best Power - Your Source for Power Excellence</title>
+    
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        *{
+        /* --- General and Body Styles --- */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        body{
-             background: linear-gradient(135deg, #9ec7f0 0%, #606161 100%);
-            color: #333;
-            line-height: 1.6;
-            font-family: 'Poppins', sans-serif;
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-      
-        nav{
-           position: fixed;
+
+        /* --- Navigation Bar --- */
+        nav {
+            position: fixed;
             width: 100%;
-            left: 0;
-            top: 0;
-            height:60px;
-            z-index:  8;
+            height: 60px;
+            z-index: 1000;
+            background: linear-gradient(135deg, #0f2a57 0%, #1A4B8C 100%);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        .links{
-          display: inline-block;
-          white-space: nowrap;
+
+        .navbar {
+            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+            padding: 0px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: #2C3E50;
         }
-        .links li a{
-             padding:10px 8px;
+
+        .logo h2 {
+            color: cornsilk;
+            cursor: pointer;
+            margin-right: 110px;
+            font-size: 30px;
+            white-space: nowrap;
         }
-        nav .navbar{
-        background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
-          padding: 0px 50px;
-             display: flex;
-             justify-content: space-between;
-             align-items: center;
-      width: 100%;
-         height: 100%;
-        background-color:#2C3E50;
-        }
-        
-        .navbar li{
+
+        .navlinks .links {
             list-style: none;
             white-space: nowrap;
         }
-        .navbar li a{
-            text-decoration: none;
-            color:whitesmoke;
-            font-weight: 600;
-            font-size: larger;
+
+        .navlinks .links > li {
+            display: inline-block;
+            position: relative;
+            white-space: nowrap;
+            padding: 20px 5px;
         }
-        .navlinks .links li::after {
+
+        .navlinks .links li a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-weight: 600;
+            margin-left: auto;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .navlinks .links > li > a:hover {
+            color: #FFD700;
+        }
+
+        /* Dropdown Menus */
+        .htmlmenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+            border-radius: 0 0 5px 5px;
+            list-style: none;
+            display: none; /* Hidden by default */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        
+        .jssubmenu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+            border-radius: 0 0 5px 5px;
+            list-style: none;
+            padding: 0;
+            display: none; /* Hidden by default */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+
+        .navlinks .links > li:hover .htmlmenu,
+        .navlinks .links > li:hover .jssubmenu {
+            display: block; /* Show on hover */
+        }
+
+        .htmlmenu li, .jssubmenu li {
+            text-align: left;
+            width: 100%;
+        }
+        
+        .navlinks .links li a:hover,
+        .navlinks .links li a:focus {
+            color: #FFD700;
+        }
+
+        .htmlmenu li a, .jssubmenu li a {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+
+        .htmlmenu li a:hover,
+        .jssubmenu li a:hover {
+            background-color: #0f2747;
+            width: 100%;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url('https://images.unsplash.com/photo-1626721105368-4f8c4b6d1963?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 0 50px;
+            color: white;
+        }
+
+        .hello {
+            max-width: 800px;
+        }
+
+        .hello-header {
+            font-size: 3.5rem;
+            color: #FFD700;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .hello h2 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+
+        .hello p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-family: sans-serif;
+            margin-top: 20px;
+        }
+
+        /* --- General Section and Title Styles --- */
+        .title-container {
+            text-align: center;
+            max-width: 900px;
+            margin: 60px auto 40px;
+            padding: 0 20px;
+        }
+
+        .title-container h1, .section-title {
+            font-size: 2.8rem;
+            color: #1A4B8C;
+            margin-bottom: 80px;
+            position: relative;
+            display: inline-block;
+            font-weight: 700;
+        }
+
+        .title-container h1::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 100%;
-            height: 20px;
-            background: transparent;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #FFD700, #FFA500);
+            border-radius: 2px;
         }
-        .logo h2{
-            cursor: pointer;
-            white-space: nowrap;
-            color:cornsilk
-        }
-        .navlinks .links li {
-            transition: all 0.3s ease;
-            display: inline;
-            padding: 20px 0;
-            position: relative;
-        }
-        
-        .htmlcss-arrow,.js-arrow,.more-arrow{
-            color:rgb(220, 212, 212);
-            line-height: 20px;
-            display: inline-block;
-        }
-        .htmlcss-arrow:hover,.js-arrow:hover {
-            transform: rotate(180deg);
-            transition:all 0.2s ease;
-        }
-        .htmlmenu{
-            position: absolute;
-            display:none;
-            text-align: center;
-            top:45px;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            padding: 0px 30px;
-            left:10px;
-            border-radius: 0px 0px 5px 5px;
-            line-height: 20px;
-            background-color: #2C3E50 ;
-            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
-            z-index: 2;
-        }
-        .htmlmenu li a{
-            display:block;
-            border-bottom: 1px solid rgb(19, 16, 6);
-        }
-        .navlinks .links li:hover .htmlmenu {
-            display:block;
-            transition-delay: 0.7s;
-        }
-        .more-arrow{
-            display: inline-block;
-            position: absolute;
-            top:10px;
-            right:25px;
-        }
-        .more{
-            position: relative;
-        }
-        
-        .moresubmenu{
-            position: absolute;
-            background-color: #2C3E50;
-            z-index: 2;
-            top:10px;
-            display:none;
-            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
-            left:60px;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            bottom: 1px solid rgb(10, 8, 3);
-            border-radius: 0px 0px 5px 5px;
-        }
-        
-        .navlinks .links li .more:hover .moresubmenu{
-            display: block;
-            transition-delay: 0.2s;
-        }
-        .about-title{
-            margin: auto;
-            text-align: center;
-            justify-content: center;
-            width:100%;
-        }
-        
-        .jssubmenu{
-            position: absolute;
-            left:20px;
-            top:45px;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-            margin-top:3px;  
-            padding-top: 30px;
-            z-index: 9;
-            display: none;
-            background-color: #2C3E50;
-            padding: 0px;
-            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
-            width:200px;
-            border-radius: 0px 0px 5px 5px;
-        }
-        .jssubmenu a{
-            display: block;
-            border-bottom: 1px solid rgb(14, 11, 2);
-            white-space: nowrap;
-        }
-        .navlinks .links li:hover .jssubmenu{
-            display: block;
-            transition: all 0.3s ease-in;
-            transition-delay: 0.2s;
-        }
-        
-        .about-wrapper {
-            max-width: 1200px;
-            margin: 80px auto;
-            padding: 0 20px;
-            margin-bottom: 200px;
+
+        .title-container p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #444;
+            margin-top: 30px;
         }
 
         .section-title {
+            display: block;
             text-align: center;
-            margin-bottom: 60px;
+            margin-top: 80px;
         }
 
-        .section-title h2 {
-            font-size: 36px;
-            color:whitesmoke;
-            margin-bottom: 15px;
-            position: relative;
-            display: inline-block;
-        }
-        .section-title p{
-            color: whitesmoke;
+        /* --- Services Section --- */
+        .service-title-section {
+            padding: 40px 0;
+            background: linear-gradient(135deg, #6fb6fd 0%, #606161 100%);
         }
 
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            width:60%;
-            height: 3px;
-            background:rgb(220, 174, 55);
-            bottom: -10px;
-            left: 20%;
+        .service-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 4000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .img-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            margin-bottom: 80px;
-            align-items: center;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+        .service-card {
+            background-color: #ecdede;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .img-wrapper:hover {
+        .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
         }
 
-        .img-wrapper:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-
-        .image {
-            flex: 1;
-            min-width: 300px;
-            max-height: 400px;
-            overflow:hidden;
-        }
-
-        .image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .img-wrapper:hover .image img {
-            transform: scale(1.05);
-        }
-
-        .about-content {
-            color: #afd8f4;
-            flex:1;
-            min-width: 300px;
-            padding: 40px;
-        }
-
-        .about-content h5 {
-            font-weight: 600;
-            font-size: 24px;
-            color: #2c3e50;
+        .service-card .trans {
+            max-width: 100%;
+            max-height: 200px;
+            object-fit:  cover ;
             margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            color: #1A4B8C;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .service-list {
+            list-style: none;
+            padding: 0;
+            color: #333;
+            line-height: 1.8;
+        }
+
+        /* --- Button --- */
+        .button-wrapper {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- Logo Scroller (Partners/Clients) --- */
+        .logo-wrapper {
+            overflow: hidden;
+            position: relative;
+            padding: 20px 0;
+            background-color: rgb(255, 255, 255);
+            margin-bottom: 200px;
+        }
+
+        .logo-wrapper::before, .logo-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .logo-wrapper::before {
+            left: 0;
+            background: linear-gradient(to left, rgba(255,255,255,0), white);
+        }
+
+        .logo-wrapper::after {
+            right: 0;
+            background: linear-gradient(to right, rgba(255,255,255,0), white);
+        }
+
+        .logo-slide {
+            display: inline-block;
+            white-space: nowrap;
+            animation: 15s slide infinite linear;
+        }
+
+        .logo-slide img {
+            height: 80px;
+            width: auto;
+            margin: 0 40px;
+            vertical-align: middle;
+        }
+
+        @keyframes slide {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* --- "Hi There" Section --- */
+        .best-wrapper {
+            background: linear-gradient(135deg, #6fb6fd 0%, #606161 100%);
+            padding: 80px 20px;
+        }
+
+        .best-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .best-header {
+            font-size: 2.2rem;
+            color: #0F2C59;
+            margin-bottom: 15px;
+        }
+
+        .best-sec {
+            display: block;
+            font-size: 1.5rem;
+            color: #1A4B8C;
+            margin-bottom: 25px;
             position: relative;
         }
 
-        .about-content h5::after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background: #3498db;
-            bottom: -10px;
-            left: 0;
+        .best-sec:hover {
+            text-decoration: underline;
+            transition: 1ms;
         }
 
-        .about-content p {
-            color: #555;
-            margin-bottom: 15px;
-            text-align:  justify;
+        .best-content p {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: #222020;
+            font-family: 'Times New Roman', Times, serif;
         }
 
-        .highlight {
-            color: #3498db;
-            font-weight: 600;
-        }
-        
+        /* --- Footer --- */
         .footer {
             width: 100%;
             background-color: #0F2C59;
             border-top: 2px solid black;
             padding: 15px 20px;
             height: auto;
-            z-index:8;
+            z-index: 8;
         }
 
         .container {
@@ -327,6 +415,7 @@
         .social-links a i {
             color: darkorange;
             font-size: 20px;
+            padding: 0px 10px;
             transition: all 0.3s ease;
         }
 
@@ -344,44 +433,213 @@
         h4 {
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
-        .social{
+        
+        .social {
             position: relative;
         }
-        .follow{
+        
+        .follow {
             position: absolute;
             color: #afd8f4;
-            right:20px;
-            bottom:30px;
+            right: 70px;
+            bottom: 30px;
         }
- 
-        .hamburger{
+        
+        .hamburger {
+            display: none;
+            font-size: 1.8rem;
+            color: white;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        /* Chat Widget Styles - SMALLER BUTTONS */
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+        }
+        
+        .chat-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            position: relative;
+        }
+        
+        .chat-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+        }
+        
+        .chat-button i {
+            font-size: 22px;
+        }
+        
+        .telegram-button {
+            background: #0088cc;
+        }
+        
+        .whatsapp-button {
+            background: #25D366;
+        }
+        
+        .hide-button {
+            background: #6b7280;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .hide-button i {
+            font-size: 18px;
+        }
+        
+        .notification-dot {
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            width: 16px;
+            height: 16px;
+            background: #ff3333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        /* Animation for initial popup */
+        @keyframes slideIn {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 51, 51, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 8px rgba(255, 51, 51, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(255, 51, 51, 0);
+            }
+        }
+        
+        .chat-button.popup-active {
+            animation: slideIn 0.8s ease forwards;
+        }
+        
+        /* Tooltip style */
+        .tooltip {
+            position: absolute;
+            bottom: 60px;
+            right: 0;
+            background: #333;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            width: 180px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            text-align: center;
+        }
+        
+        .tooltip:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            right: 12px;
+            border-width: 8px 8px 0;
+            border-style: solid;
+            border-color: #333 transparent transparent;
+        }
+        
+        .chat-button:hover .tooltip {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .hidden {
             display: none;
         }
-
-        /* Improved Mobile Styles */
+        
+        /* Responsive design */
         @media (max-width: 768px) {
-            .img-wrapper, .img-wrapper:nth-child(even) {
-                flex-direction: column;
-            }
-            
-            .image {
-                width: 100%;
-                max-height: 300px;
-            }
-            
-            .about-content {
-                padding: 25px;
-            }
-            
-            .section-title h2 {
-                font-size: 28px;
-            }
-        }
-
-        @media (max-width: 600px) {
             .footer {
                 padding: 10px 15px;
-                margin-bottom: 300px;
+            }
+            
+            .hamburger {
+                display: block;
+                position: relative;
+                left: 130px;
+            }
+            
+            .navlinks {
+                display: none;
+                width: 100%;
+                background: linear-gradient(135deg, #0a0f1c 0%, #0f2747 100%);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 20px 0;
+            }
+            
+            .htmlmenu, .jssubmenu {
+                z-index: 2000;
+            }
+            
+            .htmlmenu, .jssubmenu {
+                padding: 0px;
+                position: absolute;
+                left: 10%;
+                font-size: 10px;
+                bottom: 10px;
+            }
+            
+            .htmlmenu li a, .jssubmenu li a {
+                background-color: #1A4B8C;
+                width: 100%;
+                text-align: left;
+            }
+            
+            .navlinks .links li {
+                display: block;
+                text-align: center;
+            }
+            
+            .navlinks.active {
+                display: block;
             }
             
             .container {
@@ -404,127 +662,227 @@
                 font-size: 15px;
             }
             
-            h2 {
-                margin-bottom: 30px;
-                text-align: center;
-            }
-            
-            .about-wrapper {
-                margin-top: 350px;
-            }
-            
-            .follow {
-                position: static;
-            }
-            
             nav {
-                height: auto;
+                min-width: 100%;
+                height: 50px;
             }
             
             .navbar {
-                padding: 0 20px;
-                height: 60px;
-            }
-            
-            .navlinks {
-                display: none;
-                position: absolute;
-                top: 60px;
-                left: 0;
+                display: flex;
+                flex-direction: column;
                 width: 100%;
-                background: linear-gradient(135deg, #0a0f1c 0%, #0f2747 100%);
             }
             
-            .navlinks.active {
+            .navbar .navlinks .links li {
                 display: block;
+            }
+            
+            .navbar .logo {
+                position: fixed;
+                left: 0;
+                top: 0;
+                margin-bottom: 200px;
             }
             
             .logo h2 {
                 font-size: 30px;
             }
             
-            .logo {
-                position: relative;
-                right: 30px;
+            .title-container h1, .section-title {
+                font-size: 20px;
+                margin-top: 30px;
+                margin-bottom: 20px;
             }
             
-            .hamburger {
-                display: block;
-                color: whitesmoke;
-                border: none;
-                cursor: pointer;
-                background: none;
-                font-size: 30px;
-                padding: 0;
+            .logo-slide img {
+                height: 40px;
             }
             
-            /* Improved Dropdown Menu Styles */
-            .navlinks .links li {
-                display: block;
-                padding: 0;
-                position: relative;
-                border-bottom: 1px solid rgba(255,255,255,0.1);
+            .logo-wrapper {
+                margin-bottom: 30px;
             }
             
-            .navlinks .links li a {
-                padding: 15px 20px;
-                display: block;
-                text-align: left;
+            .best-wrapper {
+                padding-top: 0px;
+                margin-top: 0px;
             }
             
-            .htmlcss-arrow, .js-arrow {
-                position: absolute;
-                right: 20px;
-                top: 15px;
-                transition: transform 0.3s ease;
+            .best-header {
+                font-size: 20px;
             }
             
-            .navlinks .links li:hover .htmlcss-arrow,
-            .navlinks .links li:hover .js-arrow {
-                transform: rotate(180deg);
+            .best-sec {
+                margin-top: 10px;
+                font-size: 20px;
+            }
+            
+            .best-content p {
+                font-size: 15px;
+            }
+            
+            .links {
+                position: fixed;
+                padding-top: 60px;
+                text-align: center;
+                left: 30%;
+                top: 0%;
+            }
+            
+            .links li {
+                line-height: 5px;
             }
             
             .htmlmenu, .jssubmenu {
-                position: relative;
-                width: 100%;
-                left: 0;
-                top: 0;
-                display: none;
-                background: linear-gradient(135deg, #0c2f65 0%, #5385c7 100%);
-                padding: 0;
-                margin: 0;
-                border-radius: 0;
-                box-shadow: none;
+                z-index: 100;
+                line-height: 15px;
             }
             
-            .htmlmenu li a, .jssubmenu li a {
-                padding: 12px 30px !important;
-                text-align: left;
-                background: transparent;
+            .hello-header {
+                margin-top: 100px;
+                font-size: 20px;
+            }
+            
+            .hello h2 {
+                font-size: 20px;
+            }
+            
+            .hero p {
+                font-size: 15px;
+            }
+            
+            .title-container h1 {
+                font-size: 25px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            
+            .button-wrapper {
+                margin-top: 20px;
+                margin-bottom: 0px;
+            }
+            
+            .btn {
+                font-size: 10px;
+                padding: 10px;
+            }
+            
+            .logo h2 {
+                font-size: 20px;
+                padding: 10px 0px;
+            }
+            
+            h1 {
+                font-size: 10px;
+            }
+            
+            .footer {
+                width: 100%;
+                background-color: #0F2C59;
+                border-top: 2px solid black;
+                padding: 15px 20px;
+                height: 200px;
+                z-index: 8;
+            }
+            
+            .social .social-links i {
+                margin-top: 20px;
+            }
+            
+            .icon .fa-bars {
+                display: block;
+                position: fixed;
+                top: 1%;
+                font-size: 30px;
+                left: 90%;
+            }
+            
+            .icon {
+                display: block;
+                position: absolute;
+                top: 18px;
+                right: 20px;
+                z-index: 1001;
+            }
+            
+            .navlinks {
+                position: fixed;
+                top: 50px;
+                left: 0;
+                width: 100%;
+                height: 320px;
+                background: linear-gradient(135deg, #0F2C59 0%, #1A4B8C 100%);
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+            
+            .navlinks.active {
+                transform: translateX(0);
+            }
+            
+            .navlinks .links {
+                padding: 20px;
+            }
+            
+            .navlinks .links li {
                 border-bottom: 1px solid rgba(255,255,255,0.1);
             }
             
-            .navlinks .links li:hover .htmlmenu,
-            .navlinks .links li:hover .jssubmenu {
-                display: block;
+            /* Hide hover behavior on mobile */
+            .navlinks .links > li:hover .htmlmenu,
+            .navlinks .links > li:hover .jssubmenu {
+                display: none;
             }
             
-            .moresubmenu {
-                position: relative;
-                left: 0;
-                top: 0;
+            /* Show dropdowns when parent has active class */
+            .navlinks .links > li.active .htmlmenu,
+            .navlinks .links > li.active .jssubmenu {
+                display: block;
+                position: static;
                 width: 100%;
             }
             
-            .more-arrow {
-                position: static;
-                display: inline-block;
-                margin-left: 5px;
+            .chat-widget {
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            /* Even smaller buttons on mobile */
+            .chat-button {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .chat-button i {
+                font-size: 20px;
+            }
+            
+            .hide-button {
+                width: 36px;
+                height: 36px;
+            }
+            
+            .hide-button i {
+                font-size: 16px;
+            }
+            
+            .notification-dot {
+                width: 14px;
+                height: 14px;
+                font-size: 9px;
+            }
+            
+            .tooltip {
+                width: 160px;
+                font-size: 11px;
+                bottom: 55px;
             }
         }
     </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
     <nav>
         <div class="navbar">
             <div class="logo">
@@ -535,77 +893,141 @@
             </button>
             <div class="navlinks" id="navlinks">
                 <ul class="links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#">Service and product</a>
-                        <i class='bx bxs-chevron-down htmlcss-arrow arrow'></i>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">Service and product</a>
                         <ul class="htmlmenu">
-                            <li><a href="import.html">Import and Distribution of Power Equipment</a></li>
-                            <li><a href="manu.html"> Manufacturing, Assembly, and Testing</a></li>
-                            <li><a href="ict.html"> Import and Distribution of ICT Equipment</a></li>
-                            <li class="more"><a href="soft.html">Embedded Solutions and Software Integration</a></li>
-                        </ul> 
+                            <li><a href="import.html#import">Import and Distribution of Power Equipment</a></li>
+                            <li><a href="manu.html#manu">Manufacturing, Assembly, and Testing</a></li>
+                            <li><a href="ict.html#ict">Import and Distribution of ICT Equipment</a></li>
+                            <li><a href="soft.html#soft">Embedded Solutions and Software Integration</a></li>
+                        </ul>
                     </li>
-                    <li><a href="About Us.html">About us</a>
-                        <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                    <li>
+                        <a href="About Us.html">About us</a>
                         <ul class="jssubmenu">
                             <li><a href="About Us.html#about">About company</a></li>
-                            <li><a href="About Us.html#mission">Mission</a></li>
-                            <li><a href="About Us.html#vision">Vision</a></li>
-                        </ul> 
-                    </li> 
-                    <li><a href="Gallery.html">Gallery</a></li>
+                            <li><a href="about us.html#mission">Mission</a></li>
+                            <li><a href="about us.html#vision">Vision</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
                     <li><a href="contact us.html">Contact us</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
-    <div class="about-wrapper">
-        <div class="section-title">
-            <h2>Our Story</h2>
-            <p> YOUR SOURCE FOR POWER EXCELLENCE</p>
-        </div>
 
-        <div class="img-wrapper">
-            <div class="image">
-                <img src="https://via.placeholder.com/600x400?text=Best+Power+Image" alt="Best Power">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hello">
+            <h2><span class="hello-header">Best Power</span> YOUR SOURCE FOR POWER EXCELLENCE</h2>
+            <p>At Best Power, we're dedicated to lighting up lives and industries. With a legacy of 5 years, we're your go-to experts in power equipment, ICT solutions, manufacturing, and cutting-edge technology. Join us in shaping a brighter, more connected future.</p>
+        </div>
+    </section>
+
+    <!-- Services and Products Section -->
+    <div class="service-title-section">
+        <div class="title-container">
+            <h1>Services and Products</h1>
+            <p>At Best Power, our comprehensive suite of services is designed to meet the diverse needs of our clients across various industries. Our services are categorized into four key areas:</p>
+        </div>
+        <div class="service-container">
+            <div class="service-card">
+                <img class="trans" src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Power Transformer">
+                <h3>1. Import and Distribution of Power Equipment</h3>
+                <ul class="service-list">
+                    <li>Transformers</li>
+                    <li>Generators</li>
+                    <li>Powerbacks (UPS)</li>
+                    <li>Inverters & Batteries</li>
+                    <li>EV Chargers</li>
+                </ul>
             </div>
-            <div class="about-content">
-                <h5 id="about">About Us</h5>
-                <p><span class="highlight">Best Power</span>, with a legacy spanning 5 years, stands as a symbol of excellence at the intersection of energy and technology. As a trusted name in the industry, our mission is clear: to provide exceptional power solutions and cutting-edge technology services that exceed expectations.</p>
+            <div class="service-card">
+                <img class="trans" src="https://images.unsplash.com/photo-1603732551681-2e91159b9dc2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Network Switch">
+                <h3>2. Import and Distribution of ICT Equipment</h3>
+                <ul class="service-list">
+                    <li>Switches & Fiber Cables</li>
+                    <li>Cat 6 Copper Cables</li>
+                    <li>Servers & Racks</li>
+                    <li>Data Center Solutions</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img class="trans" src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Automatic Transfer Switch">
+                <h3>3. Manufacturing, Assembly, and Testing</h3>
+                <ul class="service-list">
+                    <li>Automatic Transfer Switch (ATS) Panels</li>
+                    <li>Uninterruptible Power Supply (UPS) Units</li>
+                    <li>Inverters & AVRs</li>
+                    <li>DC Controllers & HMI Units</li>
+                </ul>
+            </div>
+            <div class="service-card">
+                <img class="trans" src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Embedded System">
+                <h3>4. Embedded Solutions and Software</h3>
+                <ul class="service-list">
+                    <li>Embedded System Design</li>
+                    <li>Firmware Development</li>
+                    <li>IoT & Systems Integration</li>
+                    <li>Custom Software Development</li>
+                </ul>
             </div>
         </div>
-
-        <div class="img-wrapper">
-            <div class="image">
-                <img src="https://via.placeholder.com/600x400?text=Mission+Image" alt="Our Mission">
-            </div>
-            <div class="about-content">
-                <h5 id="mission"> Our Mission</h5>
-                <p>At <span class="highlight">Best Power</span>, our mission is crystal clear - to empower individuals, organizations, and communities by providing innovative, reliable, and sustainable power and technology solutions. We are dedicated to making a meaningful impact in the lives of our clients and the world we serve.</p>
-            </div>
+        <div class="button-wrapper">
+            <a href="import.html"><button class="btn">Learn More</button></a>
         </div>
+    </div>
 
-        <div class="img-wrapper">
-            <div class="image">
-                <img src="https://via.placeholder.com/600x400?text=Vision+Image" alt="Our Vision">
-            </div>
-            <div class="about-content">
-                <h5 id="vision">Our Vision</h5>
-                <p>At <span class="highlight">Best Power</span>, our vision is to be at the forefront of progress, igniting possibilities through power and technology. We see a future where innovation, sustainability, and reliability converge to create a world that is not only connected but also thriving.</p>
-            </div>
+    <!-- Partners Section -->
+    <h1 class="section-title">Our Partners</h1>
+    <div class="logo-wrapper">
+        <div class="logo-slide">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Arba+Minch+University" alt="Arba Minch University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Ovid+Group" alt="Ovid Group Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Selale+University" alt="Selale University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Hibret+Bank" alt="Hibret Bank Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Arba+Minch+University" alt="Arba Minch University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Ovid+Group" alt="Ovid Group Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Selale+University" alt="Selale University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Hibret+Bank" alt="Hibret Bank Logo">
+        </div>
+    </div>
+
+    <!-- "Hi There" Section -->
+    <div class="best-wrapper">
+        <div class="best-content">
+            <h2 class="best-header">BEST POWER <span class="best-sec">HI THERE!</span></h2>
+            <p>At Best Power, we believe in the transformative power of energy and technology. We're not just a company; we're a dynamic force that powers dreams, connects communities, and drives innovation. Join us, and together, we'll spark possibilities and light up a world of opportunities.</p>
         </div>
     </div>
     
+    <!-- Clients Section -->
+    <h1 class="section-title">Our Clients</h1>
+    <div class="logo-wrapper">
+        <div class="logo-slide">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Arba+Minch+University" alt="Arba Minch University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Ovid+Group" alt="Ovid Group Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Selale+University" alt="Selale University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Hibret+Bank" alt="Hibret Bank Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Arba+Minch+University" alt="Arba Minch University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Ovid+Group" alt="Ovid Group Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Selale+University" alt="Selale University Logo">
+            <img src="https://via.placeholder.com/180x80/1e40af/ffffff?text=Hibret+Bank" alt="Hibret Bank Logo">
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footleft">
-                <h4><span class="copy">&copy;</span> Best Power</h4>
+                <h4>&copy; Best Power</h4>
                 <address>
                     <h2>Address</h2>
                     <div class="add">
-                        Yeka Subcity, Woreda07, Near Signal Square,
-                        Tsega Bldg, 7th Floor, Office No. 701
+                        Yeka Subcity, Woreda 07, Near Signal Square,<br>
+                        Tsega Bldg, 7th Floor, Office No. 701<br>
                         Addis Ababa, Ethiopia
                     </div>
                 </address>
@@ -621,8 +1043,32 @@
             </div>
         </div>
     </footer>
- 
+    
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/251962696847" class="chat-button whatsapp-button" target="_blank" id="whatsappButton">
+            <i class="fab fa-whatsapp"></i>
+            <div class="notification-dot">1</div>
+            <div class="tooltip">Chat with us on WhatsApp! Click to message +251962696847</div>
+        </a>
+        
+        <!-- Telegram Button -->
+        <a href="https://t.me/miki_a7" class="chat-button telegram-button" target="_blank" id="telegramButton">
+            <i class="fab fa-telegram"></i>
+            <div class="notification-dot">1</div>
+            <div class="tooltip">Chat with us on Telegram! Click to message @miki_a7</div>
+        </a>
+        
+        <!-- Hide Button -->
+        <div class="chat-button hide-button" id="hideButton">
+            <i class="fas fa-times"></i>
+            <div class="tooltip">Hide chat buttons</div>
+        </div>
+    </div>
+   
     <script>
+        // Navigation menu toggle
         const hamburger = document.getElementById('hamburger');
         const navlinks = document.getElementById('navlinks');
 
@@ -631,6 +1077,40 @@
             hamburger.innerHTML = navlinks.classList.contains('active') 
                 ? '<i class="fas fa-times"></i>' 
                 : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Chat Widget functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const hideButton = document.getElementById('hideButton');
+            const telegramButton = document.getElementById('telegramButton');
+            const whatsappButton = document.getElementById('whatsappButton');
+            
+            // Add popup-active class to trigger animation
+            telegramButton.classList.add('popup-active');
+            whatsappButton.classList.add('popup-active');
+            
+            // Remove notification dots after 8 seconds
+            setTimeout(() => {
+                const notificationDots = document.querySelectorAll('.notification-dot');
+                notificationDots.forEach(dot => {
+                    dot.style.display = 'none';
+                });
+            }, 8000);
+            
+            // Hide buttons functionality
+            hideButton.addEventListener('click', function() {
+                telegramButton.classList.toggle('hidden');
+                whatsappButton.classList.toggle('hidden');
+                
+                // Change icon based on state
+                if (telegramButton.classList.contains('hidden')) {
+                    hideButton.innerHTML = '<i class="fas fa-comments"></i>';
+                    hideButton.querySelector('.tooltip').textContent = 'Show chat buttons';
+                } else {
+                    hideButton.innerHTML = '<i class="fas fa-times"></i>';
+                    hideButton.querySelector('.tooltip').textContent = 'Hide chat buttons';
+                }
+            });
         });
     </script>
 </body>
