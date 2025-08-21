@@ -302,8 +302,14 @@ nav {
             }
             .gallery-header{
                 padding-top: 150px;
+               
             }
-            
+            .gallery-header h1{
+                 font-size: 20px;
+            }
+            .gallery-header p{
+                 font-size: 17px;
+            }
             .logo h2{
                  padding-bottom: 25px;
                  position: relative;

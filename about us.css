@@ -298,9 +298,12 @@ display:block;
             }
             
             .section-title h2 {
-                font-size: 28px;
+                font-size: 20px;
             }
-        }
+            .section-title p{
+ font-size: 17px;
+            }
+        
  
         .highlight {
             color: #3498db;

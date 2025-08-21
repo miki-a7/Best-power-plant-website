@@ -310,11 +310,21 @@ object-fit: cover;
            .content-header h3{
              min-width:390px;
             position: relative;
-             right:0%;
+             right:3%;
+           font-size: 20px;
            }
-
+ .service-header h2{
+  font-size: 20px;
+    
+ }
+ .service-header p{
+    
+    font-size: 20px;
+ }
             .service-content h3{
                 padding-left: 10px;
+               
+              
             
             }
             .service-content p{

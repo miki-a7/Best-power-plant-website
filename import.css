@@ -310,13 +310,26 @@ object-fit: cover;
            .content-header h3{
              min-width:390px;
             position: relative;
-             right:0%;
+             right:3%;
+             
            }
-
-            .service-content h3{
+          
+       .service-content h3{
                 padding-left: 10px;
+            font-size: 17px;
+        
             
             }
+            .service-header h2{
+                font-size: 20px;
+               
+
+            }
+            .service-header p{
+                font-size: 20px;
+                
+            }
+ 
             .service-content p{
               max-width: 500px;
               margin-bottom: 20px;

@@ -322,9 +322,7 @@ object-fit: cover;
              
                .content-header h3{
              min-width:390px;
-             flex-wrap: wrap;
-             font-size: 30px;
-             font-weight: 300;
+             font-size: 17px;
              text-align:  left;
              position: relative;
              left: 10%;
